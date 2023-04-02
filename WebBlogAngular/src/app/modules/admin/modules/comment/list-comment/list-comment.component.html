@@ -1,0 +1,43 @@
+<h1> Comment</h1>
+<section>
+    <div class="example-button-row">
+    </div>
+  </section>
+    <div class="body">
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="">Id</th>
+                    <th>Content</th>
+                    <th>Date Post</th>
+                    <th>Name</th>
+                    <th>PostId</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let item of comment">
+                    <tr>
+                      <td>{{item.id}}</td>
+                      <td>{{item.content}}</td>
+                      <td>{{item.datePosted}}</td>
+                      <td>{{item.name}}</td>
+                      <td>{{item.postID}}</td>
+                      <td>
+                        <button mat-raised-button color="accent">Delete</button></td>
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+<div>
+    
+</div>

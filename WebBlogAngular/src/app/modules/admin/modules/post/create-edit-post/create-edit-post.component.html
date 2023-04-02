@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>{{this.post.id ? 'Update' :'Create'}}</h2>
+<mat-dialog-content class="mat-typography">
+    <form style="width: 100%;">
+        <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Title</mat-label>
+            <input matInput name="title" [(ngModel)]="post.title" >
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Thumnail</mat-label>
+            <input matInput name="img" [(ngModel)]="post.img" >
+        </mat-form-field>
+    </form>
+    <div style="width: 100%;">
+        <mat-form-field style="width: 100%;">
+          <mat-label>Topic</mat-label>
+          <mat-select [(ngModel)]="post.topicID">
+            <ng-container *ngFor="let topic of topics" >
+                <mat-option [value]="topic.id">{{ topic.name }}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    <div>
+        <editor 
+        [init]="init"
+        [(ngModel)]="post.content"
+        name="conten">
+        </editor>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-button (click)="create()">{{this.post.id ? 'Update' :'Create'}}</button>
+</mat-dialog-actions>

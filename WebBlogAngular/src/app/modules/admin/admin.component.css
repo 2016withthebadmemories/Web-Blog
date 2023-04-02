@@ -1,0 +1,48 @@
+.tp-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+    width: 300px;
+ }
+ .tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    width:100px;   
+ }
+
+ :host {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+ }
+
+ :host mat-sidenav-container {
+    width: 100%;
+ }
+
+ :host mat-button-toggle-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+
+ :host mat-sidenav {
+    width: 300px;
+    background-color: antiquewhite;
+ }
+
+ :host mat-button-toggle  {
+    background-color: antiquewhite;
+
+ }
+
+ .title {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 20px 0;
+ }

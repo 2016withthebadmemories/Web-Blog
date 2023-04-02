@@ -1,0 +1,11 @@
+<h1>
+    {{post.title}}
+</h1>
+<div>
+    Posted by {{post.authorID}} in {{post.datePosted | date : 'dd/MM/yyy h:mm:ss a'}}
+</div>
+<div [innerHTML]="post.content"></div>
+
+<app-comment-of-post [id]="id" [comments]="comment">
+
+</app-comment-of-post>

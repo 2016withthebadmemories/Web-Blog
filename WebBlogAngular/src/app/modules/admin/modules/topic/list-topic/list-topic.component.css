@@ -1,0 +1,116 @@
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+
+  /* Style the comment table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Style the table header */
+thead {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+  padding: 16px;
+}
+
+/* Style the table rows */
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 16px;
+}
+
+/* Style the Edit and Delete buttons */
+button {
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.mat-raised-button {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mat-raised-button.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.mat-raised-button.accent {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Material design ripple effect */
+.mat-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mat-ripple.is-animating {
+  animation: ripple-animation 600ms linear;
+}
+
+@keyframes ripple-animation {
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}

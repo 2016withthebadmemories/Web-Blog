@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Create</h2>
+<mat-dialog-content class="mat-typography">
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput name="name" [(ngModel)]="topic.name" >
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-button (click)="create()">Create</button>
+</mat-dialog-actions>

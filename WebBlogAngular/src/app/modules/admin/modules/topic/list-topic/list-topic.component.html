@@ -1,0 +1,39 @@
+<h1> Topic</h1>
+<section>
+    <div class="example-button-row">
+      <button (click)="create()" mat-raised-button color="primary">Create</button>
+    </div>
+  </section>
+    <div class="body">
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="">Id</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let item of topic">
+                    <tr>
+                      <td>{{item.id}}</td>
+                      <td>{{item.name}}</td>
+                      <td>
+                        <button (click)="edit(item)" mat-raised-button color="primary">Edit</button>
+                        <button mat-raised-button color="accent">Delete</button></td>
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+<div>
+    
+</div>

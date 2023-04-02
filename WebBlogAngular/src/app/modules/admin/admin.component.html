@@ -1,0 +1,18 @@
+<mat-sidenav-container class = "tp-container">
+    <mat-sidenav mode = "side" opened>
+        <h1 class="title">Admin</h1>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle routerLink="/admin/topic" value="bold">Topic</mat-button-toggle>
+            <mat-button-toggle routerLink="/admin/post" value="italic">Post</mat-button-toggle>
+            <mat-button-toggle routerLink="/admin/comment" value="underline">Comment</mat-button-toggle>
+          </mat-button-toggle-group>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+ </mat-sidenav-container>

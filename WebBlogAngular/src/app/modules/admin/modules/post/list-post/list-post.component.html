@@ -1,0 +1,45 @@
+<h1>Post</h1>
+<section>
+    <div class="example-button-row" style="margin-bottom: 10px;">
+      <button (click)="create()" mat-raised-button color="primary">Create</button>
+    </div>
+  </section>
+    <div class="body">
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="">Id</th>
+                    <th>Title</th>
+                    <th>Date Post</th>
+                    <th>TopicId</th>
+                    <th>AuthorId</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let item of post ">
+                    <tr>
+                      <td>{{item.id}}</td>
+                      <td>{{item.title}}</td>
+                      <td>{{item.datePosted}}</td>
+                      <td>{{item.topicID}}</td>
+                      <td>{{item.authorID}}</td>
+                      <td>
+                        <button (click)="edit(item)" mat-raised-button color="primary">Edit</button>
+                        <button mat-raised-button color="accent" style="margin-left: 14px;">Delete</button></td>
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+<div>
+    
+</div>

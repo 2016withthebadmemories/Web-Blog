@@ -1,0 +1,11 @@
+<h2>Tìm kiếm bài viết theo tên</h2>
+          <div class="row">
+            <div class="col-md-4 mb-3"  *ngFor="let item of post">
+              <div class="card">
+                <img [src]="item.img" class="card-img-top" alt="..." routerLink="/home/post/{{item.id}}">
+                <div class="card-body">
+                  <b><h4 class="card-title truncate">{{item.title}}</h4></b>
+                </div>
+              </div>
+            </div>
+          </div>

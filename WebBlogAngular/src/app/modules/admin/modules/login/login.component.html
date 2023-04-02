@@ -1,0 +1,20 @@
+<div class="center">
+    <h1>Login</h1>
+    <form [formGroup]="fg">
+      <div class="txt_field">
+        <input formControlName="userName" type="text" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input formControlName="password" type="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="pass">Forgot Password?</div>
+      <input (click)="submit($event)" type="submit" value="Login">
+      <div class="signup_link">
+        Not a member? <a href="#">Signup</a>
+      </div>
+    </form>
+  </div>
