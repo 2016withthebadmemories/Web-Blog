@@ -31,4 +31,7 @@ export class PostService {
     editPost(data: postDto) {
         return this.httpClient.put(environment.baseApiUrl + "Post", data)
     }
+    delete(id: number) {
+        return this.httpClient.delete(environment.baseApiUrl + `Post?id=${id}`);
+    }
 }

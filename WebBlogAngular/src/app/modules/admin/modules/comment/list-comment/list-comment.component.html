@@ -28,7 +28,7 @@
                       <td>{{item.name}}</td>
                       <td>{{item.postID}}</td>
                       <td>
-                        <button mat-raised-button color="accent">Delete</button></td>
+                        <button (click)="deleteComment(item.id ? item.id : 0)" mat-raised-button color="accent">Delete</button></td>
                     </tr>
                   </ng-container>
                 </tbody>

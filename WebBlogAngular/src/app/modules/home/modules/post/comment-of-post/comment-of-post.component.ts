@@ -31,7 +31,6 @@ export class CommentOfPostComponent {
     this.commentService.createComment(comment).subscribe(s => {
       this.GetAll();
       this.name = '';
-      this.email = '';
       this.comment = '';
     });
   }

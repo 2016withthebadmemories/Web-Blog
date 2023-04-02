@@ -38,4 +38,9 @@ export class ListPostComponent {
       this.getAllPost();
     });
   }
+  deletePost(id: number) {
+    this.postService.delete(id).subscribe((rs) => {
+      this.getAllPost();
+    });
+  }
 }

@@ -28,4 +28,7 @@ export class TopicService {
     editTopic(data: topicDto) {
         return this.httpClient.put(environment.baseApiUrl + "Topic", data)
     }
+    delete(id: number) {
+        return this.httpClient.delete(environment.baseApiUrl + `Topic?id=${id}`);
+    }
 }

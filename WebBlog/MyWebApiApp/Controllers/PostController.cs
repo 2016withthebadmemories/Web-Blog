@@ -40,7 +40,7 @@ namespace MyWebApiApp.Controllers
             DateTime date = DateTime.Now;
             var post = new Post
             {
-                AuthorID = 2,
+                AuthorID = 3,
                 TopicID = input.TopicID,
                 Title = input.Title,
                 Content = input.Content,
@@ -59,9 +59,9 @@ namespace MyWebApiApp.Controllers
         }
 
         [HttpDelete]
-        public async Task Delete(int post)
+        public async Task Delete(int id)
         {
-            var postId = _dbContext.Posts.Where(x => x.Id == post).FirstOrDefault();
+            var postId = _dbContext.Posts.Where(x => x.Id == id).FirstOrDefault();
             _dbContext.Posts.Remove(postId);
             await _dbContext.SaveChangesAsync();
         }
@@ -82,6 +82,7 @@ namespace MyWebApiApp.Controllers
             return await _dbContext.Posts.Where(x => x.Title.Contains(text))
                 .Select(x => new PostModel
                 {
+                    Id = x.Id,
                     AuthorID = x.AuthorID,
                     TopicID = x.TopicID,
                     Title = x.Title,

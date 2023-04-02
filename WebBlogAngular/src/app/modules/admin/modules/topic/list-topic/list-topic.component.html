@@ -24,7 +24,7 @@
                       <td>{{item.name}}</td>
                       <td>
                         <button (click)="edit(item)" mat-raised-button color="primary">Edit</button>
-                        <button mat-raised-button color="accent">Delete</button></td>
+                        <button (click)="deleteTopic(item.id ? item.id : 0)"  mat-raised-button color="accent">Delete</button></td>
                     </tr>
                   </ng-container>
                 </tbody>

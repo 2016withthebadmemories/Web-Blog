@@ -36,6 +36,11 @@ export class ListTopicComponent {
       this.getAllTopic();
     });
   }
+  deleteTopic(id: number) {
+    this.topicService.delete(id).subscribe((rs) => {
+      this.getAllTopic();
+    });
+  }
 }
 export interface topicDto {
   id?: number;

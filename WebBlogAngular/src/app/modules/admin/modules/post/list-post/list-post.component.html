@@ -30,7 +30,7 @@
                       <td>{{item.authorID}}</td>
                       <td>
                         <button (click)="edit(item)" mat-raised-button color="primary">Edit</button>
-                        <button mat-raised-button color="accent" style="margin-left: 14px;">Delete</button></td>
+                        <button (click)="deletePost(item.id ? item.id : 0)" mat-raised-button color="accent" style="margin-left: 14px;">Delete</button></td>
                     </tr>
                   </ng-container>
                 </tbody>

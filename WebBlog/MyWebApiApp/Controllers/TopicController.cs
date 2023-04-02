@@ -53,6 +53,7 @@ namespace MyWebApiApp.Controllers
         public async Task DeleteAsync(int id)
         {
             var topic = await GetByIdAsync(id);
+
             _dbContext.Set<Topic>().Remove(topic);
             await _dbContext.SaveChangesAsync();
         }
@@ -62,6 +63,7 @@ namespace MyWebApiApp.Controllers
             var post = _dbContext.Posts.Where(x => x.TopicID == topicId)
                 .Select(x => new PostModel
                 {
+                    Id = x.Id,
                     TopicID = x.TopicID,
                     AuthorID = x.AuthorID,
                     Content = x.Content,

@@ -19,6 +19,11 @@ export class ListCommentComponent {
       this.comment = rs;
     })
   }
+  deleteComment(id: number) {
+    this.commentService.delete(id).subscribe((rs) => {
+      this.getAllTopic();
+    });
+  }
 }
 export interface commentDto{
   id: number;

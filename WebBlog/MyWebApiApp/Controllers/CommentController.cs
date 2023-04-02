@@ -59,9 +59,9 @@ namespace MyWebApiApp.Controllers
         }
 
         [HttpDelete]
-        public async Task Delete(int comment)
+        public async Task Delete(int id)
         {
-            var commentId = _dbContext.Comments.Where(x => x.Id == comment).FirstOrDefault();
+            var commentId = _dbContext.Comments.Where(x => x.Id == id).FirstOrDefault();
             _dbContext.Comments.Remove(commentId);
             await _dbContext.SaveChangesAsync();
         }
